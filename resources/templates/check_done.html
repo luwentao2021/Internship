@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html>
+
+<head>
+  <meta charset="UTF-8">
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">-->
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+  <title>秒杀活动发布</title>
+  <link rel="stylesheet" type="text/css" href="/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="/css/pages-getOrderInfo.css" />
+</head>
+
+<body>
+<!--head-->
+<!-- 头部栏位 -->
+<!--页面顶部-->
+
+<div class="dialog-card">
+  <h1>秒杀活动查询成功</h1>
+<!--  <p>活动名称：<h3 th:each="names:${seckillActivities.name}" th:text="${names}"></h3></p>-->
+<!--  <p>商品原价：<h3 th:each="prices:${seckillActivities.oldPrice}" th:text="${prices}"></h3></p>-->
+<!--  <p>活动价格：<h3 th:each="sekp:${seckillActivities.seckillPrice}" th:text="${sekp}"></h3></p>-->
+<!--  <p>商品数量：<h3 th:each="stock:${seckillActivities.availableStock}" th:text="${stock}"></h3></p>-->
+
+  <tr th:each="person : ${seckillActivities}">
+    <p>活动名称：<td th:text="${seckillActivities.name}"></td>
+    <p>商品原价：<td th:text="${seckillActivities.oldPrice}"></td>
+    <p>活动价格：<td th:text="${seckillActivities.seckillPrice}"></td>
+    <p>商品数量：<td th:text="${seckillActivities.availableStock}"></td>
+  </tr>
+</div>
+
+</body>
+
+</html>
